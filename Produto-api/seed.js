@@ -14,7 +14,7 @@ const produtos = [
 async function seedDatabase() {
   try {
     await client.connect();
-
+    await client.query("CREATE TABLE IF NOT EXISTS produtos ( id SERIAL PRIMARY KEY,descricao VARCHAR(255),preco DECIMAL,estoque INTEGER,data DATE);");
     // Limpar dados existentes na tabela 'produtos'
     await client.query('DELETE FROM produtos');
     console.log('Tabela produtos limpa.');

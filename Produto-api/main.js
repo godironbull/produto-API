@@ -8,5 +8,5 @@ app.use('/api', produtoRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`SERVIRDOR RODANDO !!!`);
+  console.log(`SERVIRDOR RODANDO ${PORT}!!!`);
 });

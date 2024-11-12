@@ -16,7 +16,7 @@ router.post('/produto', async (req, res) => {
 
 router.get('/produtos', async (req, res) => {
   try {
-    const produtos = await ProdutoService.listarProdutos();
+    const produtos = await ProdutoService.listarProdutos()
     res.json(produtos);
   } catch (error) {
     console.error('Erro ao buscar produtos:', error);
